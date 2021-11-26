@@ -1,0 +1,45 @@
+/* 1)this is ID selector */
+/* #headertop {
+    background-color: coral;
+    color: rgb(0, 0, 0);
+    text-align: center;
+} */
+/* 2)this is a tag selector */
+/* div{
+    background-color:darkgray;
+    color: black;
+} */
+/* this is class selector */
+.bg-color{
+    background-color: yellow;
+    color: black;
+}
+
+
+/* Background height & width */
+.content{
+    height: 80px;
+    width: 80px;
+    background-image: url("https://img.favpng.com/10/18/3/pizza-vector-graphics-clip-art-illustration-cartoon-png-favpng-pqD4nBTmsVTmc0ZsNt3Cchkx9.jpg");
+
+}
+
+/* Borders */
+/* margin :top right bottom left */
+.spanpage{
+border-color: gray;
+border-width: 1px;
+border-style:solid;
+border-radius: 16px;
+margin: 10px 10px 10px 10px;
+padding: 4px 9px 4px 9px;
+}
+/* display */
+.divPaginator{
+    display:flex;
+}
+
+.margin-5{
+    margin: 5px;
+}
+
