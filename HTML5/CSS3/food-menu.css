@@ -1,0 +1,15 @@
+.food-container{
+    margin: 50px;
+    padding: 25px 35px 25px 35px;
+    min-height: 300px;
+    min-width: 600px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    
+   
+}
+.foodmenu-left{
+  
+        width: 10%;
+        padding: 22px;
+        vertical-align: top;
+}

@@ -1,0 +1,28 @@
+.backg{
+    background-color: chocolate;
+    color: black;
+}
+
+.parent{
+    margin-left: 150px;
+    position: static;
+
+}
+.display-div{
+    position: absolute;
+
+    /* display: inline; */
+    /* display:flex; */
+    /* visibility: hidden; */
+        /* display: none; */
+
+}
+
+.display-span{
+    display:inline-block;
+    height: 100px;
+    width: 200px;
+}
+/*Types of DISPLAY/*
+1)inlne
+2)block 

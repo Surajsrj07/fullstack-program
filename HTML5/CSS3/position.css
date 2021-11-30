@@ -1,0 +1,33 @@
+.backg{
+    background-color: chocolate;
+    color: black;
+}
+
+.parent{
+    left: 200px;
+
+}
+.display-div{
+    background-color: hotpink;
+    position: relative;
+    padding: 10px;
+    border: 15px solid greenyellow;
+    margin: 20px;
+    margin-top: 40px;
+    
+
+    /* display: inline; */
+    /* display:flex; */
+    /* visibility: hidden; */
+        /* display: none; */
+
+}
+
+.display-span{
+    display:inline-block;
+    height: 100px;
+    width: 200px;
+}
+/*Types of DISPLAY/*
+1)inlne
+2)block 
