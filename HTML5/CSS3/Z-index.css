@@ -1,0 +1,19 @@
+.img1{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+}
+h3{
+    color:white;
+    font-weight: 600;
+    margin-top: 90px;
+    margin-left: 35px;
+
+}
+.img2{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index:-2;
+}
