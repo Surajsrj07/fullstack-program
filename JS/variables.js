@@ -20,7 +20,7 @@ let num2 = 20;
 // var -Function level scope
 // let -Block level scope
 
-function Myprint(){
+function MyPrint(){
     console.log("Inside Function===");
 
     console.log("var num" + num);
