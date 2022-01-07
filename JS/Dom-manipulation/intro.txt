@@ -1,0 +1,24 @@
+
+DOM MANIPULATION
+
+1.Document Object Model
+2.Collection of all elements in html page
+3.Tree like structure to maintain all Html elements
+4.On any event,DOM is updated(performance)          ->(REACT(Virtual DOM) AND ANGULAR)
+
+div-> row -> (col-1.col-2)
+
+
+DOM Interaction
+
+1.Get an elements and its value.
+-Get values from all elements on form and print in console.
+
+2.Set value to an elements
+-Set values on a label
+
+3.To handle any events(click of button ,entering text into the textbox)
+-On click of button
+
+4.To style an elements
+-Style textbox

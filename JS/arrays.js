@@ -36,6 +36,6 @@ console.log(cars);
 // 6.Removes multiple items from array and create new array
 
 const newCars =cars.splice(5,2);
-console.log(newcars);
+console.log(newCars);
 console.log(cars);
 
