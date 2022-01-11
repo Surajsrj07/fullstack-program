@@ -13,6 +13,7 @@ function handleSubmit(){
     // 2.Get value of Element
 
     const fname = txtbFname.value;
+    updateStorage(fname);
     console.log(fname);
 
     //1.Get LastName element
@@ -25,6 +26,13 @@ function handleSubmit(){
     const txtbEmail = document.getElementById("txtbEmail");
    // 2.Get value of Element
     const Email = txtbEmail.value;
+   // validate E-mail
+    // 1. Check if @ (t@t.in)
+    const indexOfAt = Email.indexOf("@");
+    const valid = Email.length > (indexOfAt + 4);
+    if(indexOfAt<1 || !valid  || ! Email.endsWith(".com")) {
+        alert("Please enter a valid Email");
+    }
     console.log(Email);
 
     //1.Get PASSWORD element
@@ -36,9 +44,14 @@ function handleSubmit(){
     //1.Get DOB element
     const inputDOB = document.getElementById("inputDOB");
    // 2.Get value of Element
-   const DOB = inputDOB.value;
+   const DOB = new Date(inputDOB.value);
+   const yearofSelectedDate = DOB.getFullYear();
+   const currentYear = new Date().getFullYear();
+   if(yearofSelectedDate>(currentYear-15)){
+       alert("You should be atleast 15years old");
+   }
    console.log(DOB);
-
+ 
 //    GET value by name
 
 const genderButtons = document.getElementsByName("gender");
@@ -70,3 +83,26 @@ function handleNameInput(){
     fnameResult.innerText = nameinput.value;
 
 }
+
+
+
+
+
+function updateStorage(firstname){
+
+    localStorage.setItem("fname", firstname );
+    sessionStorage.setItem("fname", firstname );
+}
+
+
+// sessionStorage (Domain)
+// values are only scoped to 1 tab
+
+// localStorage (Domain)
+
+// through out browser
+
+function updateForm(){
+      const txtbFname = document.getElementById("txtbFname");
+       txtbFname.value = sessionStorage.getItem("fname");
+  }
