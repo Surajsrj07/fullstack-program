@@ -1,20 +1,34 @@
-// We need to create nodejs server(http)
-// HTTP (Hyper Text Transafer Protocol)
-// - Allows communication between client and server
-// - Transfer data between client and server
+//1.Import Express.
 
-// Importing HTTP Package
+const express = require("express");
 
-// Types of Packages/Libs
-// 1. Packages of Core Module
-// 2. Pckages from NPM
+const bodyParser = require("body-Parser");
 
-const http = require("http");
+//Import Routes
 
-// Creating server using http protocol
-// Server should have ports
-http.createServer((req, res)=>{
-    res.end("Hello world from NodeJS");
-}).listen(7200);
+const restaurantRoutes = require("./restaurant/routes/api-restaurant");
+const mongodb = require("./config/mongodb");
 
-console.log("Server is listening on 7200");
+mongodb.connect();
+
+//2.creating a server
+
+const server = express();
+
+//3.Assigning port to a server
+
+server.listen("3200");
+
+//5.Handle api requests
+server.use(bodyParser.json());
+//server.use method takes all request methods
+server.use("/api/restaurant", restaurantRoutes);
+
+//4.Handle default request from client
+
+server.get("/",(req, res)=>{
+    res.send("Hello from Express");
+})
+
+console.log("Express is listening on 3200"); 
+

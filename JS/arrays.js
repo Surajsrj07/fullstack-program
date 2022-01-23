@@ -2,6 +2,7 @@
 
 var cars = ["BMW", "Honda", "Mercedes","Mahindra","Audi"];
 console.log(cars);
+console.log(typeof cars);
 
 
 // 1.Add a new item in an array
