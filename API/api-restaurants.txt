@@ -2,12 +2,11 @@
 
 
 1.Add a new restaurant- POST
-2.Filter restaurant based on location-GET
+2.Get restaurants by location-GET
 3.Get all restaurants-GET
 4.Update a restaurant-PUT
 5.Delete a restaurant-DELETE
 6.Get restaurant by id-GET
 
 
-POSTMAN - Tool to test api's.
-
+POSTMAN - Tool to test 
