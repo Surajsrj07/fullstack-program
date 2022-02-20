@@ -5,6 +5,8 @@ const Restaurant = require("../models/restaurants");
 
 const repo = require("../repositories/restaurants");
 
+const url = require("url");
+
 //Trying to add Restaurant
 
 
@@ -76,11 +78,25 @@ exports.deleteRestaurant = (req, res)=>{
 
 //search Restaurant
 
-exports.searchRestaurant =(req, res)=>{
-    const search = req.params.string;
-    console.log(search);
-    repo.searchString(search, (restaurant)=>{
-res.send(restaurant);
+exports.searchRestaurant = (req, res)=>{
+    const key = req.params.key;
+    console.log(key);
+    repo.search(key, (restaurants)=>{
+        res.send(restaurants);
     })
 }
 
+//filter Restaurant
+
+exports.filterRestaurant =(req, res)=>{
+    const params = url.parse(req.url, true).query;
+    console.log(params);
+    if(!params.name){
+        repo.getByLocation(params.location, (restaurants)=>{
+            res.send(restaurants);
+        })
+    }
+    repo.filterRestaurant(params.location, params.name, (result)=>{
+        res.send(result);
+    });
+}

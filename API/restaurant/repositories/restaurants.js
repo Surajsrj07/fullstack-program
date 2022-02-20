@@ -76,21 +76,40 @@ exports.deleteRestaurant = (id, callback) => {
   const collection = mongodb.getCollection("Restaurant");
   collection.findOneAndDelete({ _id: ObjectId(id) })
     .then(
-      () => { callback()
-       },
+      () => {
+        callback()
+      },
       err => { console.log(err); }
     )
 }
 
 
-exports.searchString = (search, callback)=>{
+exports.search = (key, callback) => {
   const collection = mongodb.getCollection("Restaurant");
-  collection.find({name: {$regex:search}}).toArray().then(
-      (restaurant)=>{
-          callback(restaurant);
-      },
-      err=>{
-          console.log(err);
-      }
+  collection.find({ name: { $regex: key } }).toArray().then(
+    (restaurants) => {
+      callback(restaurants);
+    },
+    err => {
+      console.log(err);
+    }
+  )
+}
+
+
+exports.filterRestaurant = (city, name, callback) => {
+  const collection = mongodb.getCollection("Restaurant");
+  collection.find({
+    $and: [
+      { name: { $regex: name } },
+      { location: city }
+    ]
+  }).toArray().then(
+    (restaurants) => {
+      callback(restaurants);
+    },
+    err => {
+      console.log(err);
+    }
   )
 }

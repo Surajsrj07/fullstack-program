@@ -4,6 +4,8 @@ const express = require("express");
 
 const bodyParser = require("body-Parser");
 
+const cors = require("cors");
+
 //Import Routes
 
 const restaurantRoutes = require("./restaurant/routes/api-restaurant");
@@ -14,6 +16,8 @@ mongodb.connect();
 //2.creating a server
 
 const server = express();
+
+server.use(cors());
 
 //3.Assigning port to a server
 
