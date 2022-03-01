@@ -1,0 +1,15 @@
+
+
+.card{
+    margin: 13px;
+    padding: 20px;
+    height: 160px;
+    width: 850px;
+    border: 1px solid lightcyan;
+}
+
+img{
+    height: 120px;
+    width: 120px;
+
+}
