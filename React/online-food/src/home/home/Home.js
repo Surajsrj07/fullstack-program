@@ -1,16 +1,14 @@
-import "./Home.css";
+import "./Home.css"
+import {useEffect, useState} from "react";
 import Header from "../header/Header";
-import { useEffect, useState } from "react";
 import RestaurantCard from "../../Restaurant-card/Restaurant";
 
-function Home() {
+function Home(){
+// Maintaing statees in component.
+var [restaurants, setRestaurants]= useState([]);
+var [location, setLocation]=useState([]);
 
-    //Mantaining states in component
-
-    var [restaurants, setRestaurants] = useState([]);
-
-
-    //Lifecycle Hook get executed,when component is ready
+    // Lifecycle hook get executed when component is ready.
     useEffect(()=>{
         fetch("http://localhost:3200/api/Restaurant")
             .then(res=> res.json())
@@ -22,24 +20,36 @@ function Home() {
             );
     }, []);
 
-
     function filterRestaurant(event){
-        const location = (event.target.value);
-        fetch("http://localhost:3200/api/Restaurant/Filter?location="+location)
-            .then(res=> res.json())
-            .then(
-                (result)=>{
-                    result=result.filter(r=> r.name);
-                    setRestaurants(result);
-                }
-            );
+        location = event.target.value;
+        setLocation(location);
+        filter(location);
     }
 
+    function filterRestaurantWithName(event){
+        const name = event.target.value;
+        filter(location, name);
+    }
 
-  
+    function filter(location, name){
+        var url = "http://localhost:3200/api/Restaurant/Filter?location="+location;
+
+        if(name){
+            url = "http://localhost:3200/api/Restaurant/Filter?name="+name+"&location="+location;
+        }
+        fetch(url)
+        .then(res=> res.json())
+        .then(
+            (result)=>{
+                result=result.filter(r=> r.name);
+                setRestaurants(result);
+            }
+        );
+    }
+
     return(
         <div>
-             <Header change={(event)=>filterRestaurant(event)}/>
+            <Header change={(event)=>filterRestaurant(event)} nameInput={(event)=>filterRestaurantWithName(event)} />
             <div className="row">
                 <div className="col-md-3 filter"></div>
                 <div className="col-md-9 result-container">
