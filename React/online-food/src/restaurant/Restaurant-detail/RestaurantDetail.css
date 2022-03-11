@@ -1,0 +1,34 @@
+
+
+.banner{
+    height: 400px;
+    background-size: cover;
+    background-image: url("https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/178851251/original/52a3406075e505c4ee6da82762cc1a5075d95145/design-restaurant-menu-food-poster-and-banner-ads.jpg");
+}
+
+
+.name{
+
+    margin-top: 2%;
+    font-size: 28px;
+    font-family: monospace;
+    font-weight: bolder;
+    color:#003366;
+
+}
+
+.tab-name{
+    color:#003366;
+    font-weight: 600;
+    font-size: 18px;
+    margin-top: 4%;
+
+}
+
+p{
+    color: #003366;
+    font-family: monospace;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 3%;
+}
