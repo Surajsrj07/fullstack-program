@@ -17,19 +17,16 @@ exports.add = (item, callback) => {
     .catch(err => { console.log(err) });
 }
 
-
-exports.getAll = (callback) => {
-  //get the collection
+exports.getAll = (callback)=>{
   const collection = mongodb.getCollection("Restaurant");
-  //add data to collection
   collection.find().toArray().then(
-    (restaurants) => {
-      callback(restaurants);
-    },
-    err => {
-      console.log(err);
-    })
-
+      (restaurants)=>{
+          callback(restaurants);
+      },
+      err=>{
+          console.log(err);
+      }
+  )
 }
 
 exports.getByID = (id, callback) => {

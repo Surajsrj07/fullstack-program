@@ -3,7 +3,7 @@
 
 const Restaurant = require("../models/restaurants");
 
-const repo = require("../repositories/restaurants");
+const repo = require("../repositories/restaurants")
 
 const url = require("url");
 
@@ -26,6 +26,7 @@ exports.addRestaurants = (req, res) => {
 //trying to get all restuarant name
 
 exports.getAllRestaurants = (req, res) => {
+    console.log("okk");
     repo.getAll((restaurants) => {
         res.send(restaurants);
     })
@@ -93,10 +94,11 @@ exports.filterRestaurant =(req, res)=>{
     console.log(params);
     if(!params.name){
         repo.getByLocation(params.location, (restaurants)=>{
-            res.send(restaurants);
+             res.send(restaurants);
         })
     }
     repo.filterRestaurant(params.location, params.name, (result)=>{
-        res.send(result);
+       res.send(result);
     });
 }
+
