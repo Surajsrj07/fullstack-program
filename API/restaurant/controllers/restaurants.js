@@ -28,7 +28,7 @@ exports.addRestaurants = (req, res) => {
 exports.getAllRestaurants = (req, res) => {
     console.log("okk");
     repo.getAll((restaurants) => {
-        res.send(restaurants);
+        res.status(200).send(restaurants);
     })
 }
 

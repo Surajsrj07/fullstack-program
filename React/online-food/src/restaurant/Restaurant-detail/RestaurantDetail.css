@@ -9,7 +9,7 @@
 
 .name{
 
-    margin-top: 2%;
+    margin-top: 4%;
     font-size: 28px;
     font-family: monospace;
     font-weight: bolder;
@@ -20,10 +20,15 @@
 .tab-name{
     color:#003366;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 17px;
     margin-top: 4%;
 
 }
+
+.tab-name:hover{
+    color: #EB2929;
+}
+
 
 p{
     color: #003366;

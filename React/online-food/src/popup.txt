@@ -1,0 +1,4 @@
+1.Install React-Bootstrap (npm i react-Bootstrap).
+2.Create MenuModal component.
+3.Render MenuModal component in RestaurantDetails component.
+4.On click of online place order button,show modal. 
