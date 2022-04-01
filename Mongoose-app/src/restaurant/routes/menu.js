@@ -4,6 +4,6 @@ const controller = require("../controllers/menu");
 
 const router = express.Router();
 
-router.add("/", controller.add);
+router.post("/", controller.add);
 
 module.exports = router;
