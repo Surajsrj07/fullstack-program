@@ -13,7 +13,7 @@ mongooseConfig.connect();
 server.listen(3300);
 
 //Middleware
-server.use(bodyParser.json());
+server.use(express.json());  //or bodyParser
 
 server.use("/api/restaurant", restaurantRoutes);
 server.use("/api/menu",  menuRoutes);

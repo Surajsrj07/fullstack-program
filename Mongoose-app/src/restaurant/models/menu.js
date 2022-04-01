@@ -13,7 +13,7 @@ const MenuSchema = new mongoose.Schema(
         detail: String,
         imageURL:String,
         isVeg:Boolean,
-        restaurantID: {type:mongoose.type.ObjectId, ref: 'Restaurant'}
+        restaurantID: {type:mongoose.Types.ObjectId, ref: 'Restaurant'}
 
 
     }
@@ -22,6 +22,6 @@ const MenuSchema = new mongoose.Schema(
 
 //menus (This is mongoose standard)
 
-const menu = mongoose.model("Menu", menuSchema);
+const menu = mongoose.model("Menu", MenuSchema);
 
 module.exports = menu;
