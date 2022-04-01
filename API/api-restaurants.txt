@@ -10,3 +10,10 @@
 
 
 POSTMAN - Tool to test 
+
+
+Steps to MongoDb lookup
+
+1)Install Mongoose.
+2)Create Mongoose Schema for restaurant and menus.
+3)Lookup restaurant and its menu.
