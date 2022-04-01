@@ -23,7 +23,7 @@ exports.addRestaurants = (req, res) => {
 }
 
 
-//trying to get all restuarant name
+//trying to get all restaurant name
 
 exports.getAllRestaurants = (req, res) => {
     console.log("okk");

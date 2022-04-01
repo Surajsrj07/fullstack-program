@@ -11,3 +11,10 @@ exports.add = async (req, res)=>{
 
 
 }
+
+
+
+exports.getAll = async (req, res)=>{
+    const result = await repo.getAll();
+    res.status(200).send(result);
+}

@@ -1,3 +1,4 @@
+const menu = require("../models/menu");
 const Restaurant = require("../models/restaurant");
 
 
@@ -9,4 +10,23 @@ exports.add = async (restaurant)=>{
     catch(err){
         console.log(err);
     }
+}
+
+
+exports.getAll = async()=>{
+    const result = Restaurant.aggregate(
+        [
+            {
+                $lookup:{
+                    from :"menus",
+                    localField : "_id",
+                    foreignField :"restaurantID",
+                    as : "_menus"
+
+                }
+            }
+        ]
+    );
+    return result;
+
 }
