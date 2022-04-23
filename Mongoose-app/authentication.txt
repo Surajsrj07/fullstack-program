@@ -1,0 +1,31 @@
+Nodejs - API (REST)
+React - Frontend
+
+1.Connectionless/Sessionless Architecture
+2.Sessionfull Architecture
+
+
+1.Connectionless/Sessionless Architecture
+    -simple to implement
+    -Faster
+    -standard across all clients.
+
+1}Client login (username ,password)
+2}Server Authenticates and provide token to client.
+3}Client uses auth token to access secure API.
+4}Server checks token is valid, extratcs user information from token.
+    -if invalid/expired -> returns(401) unauthorized
+    -if valid ,it allows access.
+
+
+
+2.Sessionfull Architecture -MVC
+    -Simple Authentication
+    -Secure.
+
+
+    Problems- slower ,doesn't support all clients.
+
+
+
+    command -npm i jsonwebtoken
