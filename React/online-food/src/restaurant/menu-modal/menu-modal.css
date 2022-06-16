@@ -1,0 +1,25 @@
+.card{
+    width: 450px !important;
+    height: 200px;
+    
+}
+
+h5{
+    color: #292C40;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:550;
+}
+
+h6{
+    color: #292C40;
+    font-size: 15px;
+    font-weight:normal;
+}
+
+img{
+    border-radius: 30px;
+    height: 100px;
+    width: 100px;
+}
+
+

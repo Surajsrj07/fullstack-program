@@ -1,6 +1,5 @@
 
-import "./Header.css"
-
+import "./Header.css";
 function Header({change, nameInput}){
     return(
         <div className="header">

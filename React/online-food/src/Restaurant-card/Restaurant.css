@@ -1,20 +1,27 @@
 
 
 .card{
-    margin: 13px;
-    padding: 20px;
+    margin-top: 23px;
+    padding: 30px;
     height: 160px;
     width: 850px;
-    border: 1px solid lightcyan;
+    border: 1px solid lightblue;
+    
 }
 
 img{
     height: 120px;
     width: 120px;
 
+
 }
 
 a{
     text-decoration: none;
     color:yellowgreen;
+}
+
+p{
+    margin: auto;
+    padding-left: 40px;
 }

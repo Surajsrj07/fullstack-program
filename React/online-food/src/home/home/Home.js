@@ -1,4 +1,4 @@
-import "./Home.css"
+import "./Home.css";
 import {useEffect, useState} from "react";
 import Header from "../header/Header";
 import RestaurantCard from "../../Restaurant-card/Restaurant";

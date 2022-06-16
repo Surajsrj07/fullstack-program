@@ -19,7 +19,7 @@ function add(...numbers) {
     numbers.forEach(element => {
         sum = sum + element;
     });
-    return sum;
+    return sum;2
 }
 
 // function addArray(numbers){
@@ -53,3 +53,5 @@ console.log(allCars);
 }
 
 arrayConcat();
+
+
