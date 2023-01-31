@@ -13,8 +13,8 @@ console.log(cars[0]);
 
 // Sub-Str
 
-const result = cars.substr(7,4);  //it represents 2 parameters -(from start , end)
-console.log(result);
+const results = cars.substr(7,4);  //it represents 2 parameters -(from start , end)
+console.log(results);
 
 // Length of the string (including space)
 
